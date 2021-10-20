@@ -9,10 +9,10 @@ def bin_search(array: [float], value: float, left: int, right: int) -> int:
 
 
 def bin_search_left_border(array: [float], value: float, left: int, right: int) -> int:
-    if (left+1 >= right) or (False):
+    if left+1 >= right:
         return left
     m = (left + right) // 2
-    print(left, right, m, array[m] < value, array[left:right])
+    # print(left, right, m, array[m] < value, array[left:right])
     if array[m] < value:
         return bin_search_left_border(array, value, m, right)
     return bin_search_left_border(array, value, left, m)
